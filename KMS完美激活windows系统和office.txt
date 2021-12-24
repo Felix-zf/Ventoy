@@ -1,0 +1,46 @@
+﻿1、什么是KMS激活？
+Key Management Service（简称:KMS），一种产品批量激活机制。要求局域网中必须有一台KMS服务器，KMS服务器的作用是给局域网中的所有计算机的操作系统定周期(一般是180天)提供一个随机的激活ID(不同于产品激活密钥)
+kms.03k.org（零散坑：https://03k.org/kms.html）
+2、什么样的系统可以激活？
+Windows或Office的VOL版本    http://msdn.itellyou.cn/
+3、如何操作？
+office2016：https://technet.microsoft.com/zh-cn/library/dn385360(v=office.16).aspx
+office2013：https://technet.microsoft.com/ZH-CN/library/dn385360.aspx
+office2010：https://technet.microsoft.com/ZH-CN/library/ee624355(v=office.14).aspx
+Server/Windows：https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys
+
+
+Windows：
+1、wmic os get caption         查看当前版本信息
+2、slmgr /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D    安装key
+3、slmgr /skms kms.03k.org    设定KMS服务器地址
+4、slmgr /ato                手动激活
+
+
+office：利用Office Tool Plus
+选择Mondo（批量版）
+通道：半年企业通道 
+部署模式：下载后安装
+安装模块：office Tool Plus
+1、安装目录内找到ospp.vbs文件路径   "C:\Program Files\Microsoft Office\Office15"
+cd "C:\Program Files\Microsoft Office\Office15"
+2、cscript ospp.vbs /sethst:kms.03k.org
+3、cscript ospp.vbs /act     激活
+KMS主机可填（一个不行换另外一个，经测试第四个地址激活成功 ）：
+kms.loli.cab
+kms.90zm.xyz
+kms.cangshui.net
+kms.03k.org（推荐）
+kms.myftp.org
+zh.us.to
+kms.chinancce.com
+kms.digiboy.ir
+kms.luody.info
+kms.mrxn.net
+kms8.MSGuides.com
+xykz.f3322.org
+kms.bige0.com
+kms.shuax.com
+kms9.MSGuides.com
+kms.lotro.cc
+www.ddddg.cn
